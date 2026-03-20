@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Perceptcraft - Web Application
 
-## Getting Started
+Perceptcraft is a modern, responsive, and performance-optimized front-end web application built using **Next.js** and **Tailwind CSS**. It serves as a creative design and software development agency website, featuring beautifully crafted sections like Hero, About Us, Services, Component Showcases, and Contact Forms.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern UI/UX**: Designed with a focus on stunning aesthetics, smooth animations, and glassmorphism UI.
+- **Component-Driven Architecture**: The application is highly modular. Large monolithic pages have been refactored and split into reusable, atomic UI components and logic-driven `sections`.
+- **Fully Responsive**: Mobile-first design principles ensure the application looks great across all device sizes.
+- **Next.js App Router**: Utilizes the modern App Router architecture (`app/` directory) for seamless routing and server-side optimizations.
+- **Custom Animations**: Includes subtle micro-interactions, marquee effects, scroll-to-top functionality, and parallax scrolls.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/) (React)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Fonts**: Inter, Plus Jakarta Sans, Fraunces (Next Font)
+
+## 📂 Folder Structure
+
+The project has been organized to promote reusability and clean code practices:
+
+```text
+frontend/
+├── app/                  # Next.js App Router files (page.js, layout.js, globals.css)
+├── components/           # Reusable React components
+│   ├── layout/           # Shared layout components (Header, Footer, Sidebar, etc.)
+│   ├── sections/         # Page-specific modular sections
+│   │   ├── home/         # Home page sections (Hero, Features, Services, etc.)
+│   │   ├── about/        # About page sections (Content, Stats)
+│   │   ├── services/     # Service page sections
+│   │   └── shared/       # Shared sections (e.g., Contact Form)
+│   ├── ui/               # Lower-level reusable UI components (Buttons, Badges, ScrollToTop)
+│   └── Pages/            # Remaining complex UI patterns & pages
+├── public/               # Static assets (images, icons)
+```
+
+## 💻 Getting Started
+
+Follow these instructions to set up the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. Copy the repository to your local machine:
+   ```bash
+   git clone https://github.com/Rudra-744/Percepcraft.git
+   ```
+
+2. Navigate into the frontend directory:
+   ```bash
+   cd Percepcraft/frontend
+   ```
+
+3. Install all dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+
+Start the local development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the live result. The page will auto-update as you edit the file.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `npm run dev` - Starts the development server.
+- `npm run build` - Builds the app for production usage.
+- `npm start` - Starts the production server.
+- `npm run lint` - Runs ESLint to catch errors in your code.
