@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 
 const CATEGORIES = [
   "All",
-  "E-commerce",
-  "UI Design",
-  "Branding",
-  "3D",
-  "Webflow",
-  "Custom Development",
+  "Designing",
+  "Marketing",
+  "Website",
+  "Social Media Management",
+  "Product Shoot ",
 ];
 
 /**

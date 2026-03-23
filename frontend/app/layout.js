@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
+import SmoothScroll from "@/components/ui/SmoothScroll";
 
 // Existing font — unchanged
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -49,7 +50,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body
         suppressHydrationWarning
         className={`
@@ -58,17 +59,19 @@ export default function RootLayout({ children }) {
           ${fraunces.variable}
           font-sans antialiased
           bg-linear-to-br from-[#FFFdf6] via-[#E8F8F2] to-[#F1F0FE]
-          min-h-screen flex flex-col overflow-x-clip w-full relative
+          min-h-screen flex flex-col overflow-x-hidden w-full relative
         `}
       >
-        <div className="w-full relative overflow-x-clip flex-1 flex flex-col">
-          <Header />
-          <main className="flex-1 w-full relative">{children}</main>
-          <Footer />
-        </div>
-        <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
-          <ScrollToTop />
-        </div>
+        <SmoothScroll>
+          <div className="w-full relative overflow-x-clip flex-1 flex flex-col">
+            <Header />
+            <main className="flex-1 w-full relative">{children}</main>
+            <Footer />
+          </div>
+          <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50">
+            <ScrollToTop />
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   );

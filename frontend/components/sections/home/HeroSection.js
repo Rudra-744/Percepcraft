@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -26,7 +29,7 @@ export default function HeroSection() {
           {/* Main Heading */}
           <h1
             id="hero-heading"
-            className="text-5xl md:text-6xl lg:text-[72px] leading-[1.1] font-bold text-[#1a1a1a] mb-6 tracking-tight"
+            className="text-5xl md:text-6xl lg:text-[90px] leading-[1.1] font-bold text-[#1a1a1a] mb-6 tracking-tight"
           >
             Make a good{" "}
             <br className="hidden lg:block" />
@@ -60,28 +63,28 @@ export default function HeroSection() {
               See Inside
             </button>
 
-            {/* Decorative squiggly arrow */}
-            <div
-              className="absolute left-[110%] -bottom-10 hidden lg:block opacity-90 rotate-12"
-              aria-hidden="true"
-            >
-              <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
-                <path
-                  d="M10 60 C 20 60, 40 80, 50 50 C 60 20, 30 20, 30 50 C 30 70, 60 70, 100 20"
-                  stroke="#6658EA" strokeWidth="3" strokeLinecap="round" fill="none"
-                />
-                <path
-                  d="M85 18 L 102 18 L 98 35"
-                  stroke="#6658EA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"
-                />
-              </svg>
-            </div>
           </div>
         </div>
 
         {/* ── Right Image ── */}
-        <div className="flex-1 relative w-full max-w-[500px] lg:max-w-none flex justify-center">
-          <div className="relative w-full aspect-square md:aspect-[4/5] lg:aspect-square max-w-[550px]">
+        <div className="flex-1 relative w-full max-w-[600px] lg:max-w-none flex justify-center">
+          <div className="relative w-full aspect-square md:aspect-[4/5] lg:aspect-square max-w-[600px]">
+
+            {/* Decorative squiggly arrow/angel shape */}
+            <motion.div
+              animate={{ x: [0, -50, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeOut" }}
+              className="absolute -left-4 sm:-left-12 lg:-left-[90px] -bottom-8 sm:-bottom-12 lg:top-120 opacity-90 rotate-0 z-30 w-[100px] sm:w-[120px] lg:w-[160px] shrink-0"
+              aria-hidden="true"
+            >
+              <Image 
+                src="/hero-angel-shape copy.png" 
+                alt="Decorative angel shape" 
+                width={120} 
+                height={80} 
+                className="w-full h-auto object-contain drop-shadow-sm" 
+              />
+            </motion.div>
 
             <div
               className="absolute inset-4 border border-white/20 rounded-t-[250px] rounded-b-[100px] z-0"
@@ -90,11 +93,23 @@ export default function HeroSection() {
 
             {/* Floating star shapes */}
             <div className="absolute top-16 right-4 lg:-right-4 z-20 animate-float" aria-hidden="true">
-              <Image src="/hero-star-shape.png" alt="" width={64} height={64} />
+              <Image 
+                src="/hero-star-shape.png" 
+                alt="" 
+                width={64} 
+                height={64} 
+                style={{ width: "auto", height: "auto" }}
+              />
             </div>
 
             <div className="absolute -top-4 right-24 z-20 animate-spin-slow" aria-hidden="true">
-              <Image src="/hero-star-sm-shape.png" alt="" width={24} height={24} />
+              <Image 
+                src="/hero-star-sm-shape.png" 
+                alt="" 
+                width={24} 
+                height={24} 
+                style={{ width: "auto", height: "auto" }}
+              />
             </div>
 
             <div className="absolute bottom-12 -right-4 z-20" aria-hidden="true">

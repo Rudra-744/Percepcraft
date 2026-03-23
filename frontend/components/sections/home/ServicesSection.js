@@ -73,7 +73,7 @@ export default function ServicesSection() {
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-10">
                 <div className="order-2 sm:order-1">
                   <h3 className="text-[32px] sm:text-[38px] font-bold text-[#1a1a1a] leading-[1.2] mb-10 max-w-[300px]">
-                    Mobile app <br/> Development
+                    Social Media <br/> Marketing
                   </h3>
                   <div className="inline-flex items-center gap-4 bg-white px-5 py-3 rounded-full shadow-sm hover:shadow-md transition-shadow group-hover:bg-gray-50">
                     <span className="w-[36px] h-[36px] rounded-full bg-[#2ecc71] flex items-center justify-center shrink-0">

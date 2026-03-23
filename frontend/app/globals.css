@@ -51,6 +51,16 @@ body {
 }
 
 /* ── Scrollbar hide utility ── */
+html, body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
